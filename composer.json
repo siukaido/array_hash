@@ -1,0 +1,24 @@
+{
+    "name": "siukaido/array_hash",
+    "description": "",
+    "type": "library",
+    "keywords": ["array", "hash", "array_hash"],
+    "homepage": "https://github.com/siukaido/array_hash",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "siukaido",
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/siukaido/array_column/issues",
+        "source": "https://github.com/siukaido/array_hash"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~3.7",
+        "satooshi/php-coveralls": "~0.6"
+    },
+    "autoload": {
+        "files": ["src/array_hash.php"]
+    }
+}
