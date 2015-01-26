@@ -13,7 +13,7 @@ if (!function_exists('array_hash')) {
         }
 
         if (!is_array($params[0])) {
-            trigger_error('array_hash() expects parameter 1 to by array, ' . gettype($params[0]) . ' given', E_USER_WARNING);
+            trigger_error('array_hash() expects parameter 1 to be array, ' . gettype($params[0]) . ' given', E_USER_WARNING);
             return null;
         }
 
@@ -22,14 +22,14 @@ if (!function_exists('array_hash')) {
             && !is_string($params[1])
             && !(is_object($params[1]) && method_exists($params[1], '__toString'))
         ) {
-            trigger_error('array_hash(): The index key should be either a string or an integer', E_USER_WARNING);
+            trigger_error('array_hash(): The index key should be either a string or an integer, ' . gettype($params[1]) .' given', E_USER_WARNING);
             return false;
         }
 
         if (isset($params[2])
             && !is_bool($params[2])
         ) {
-            trigger_error('array_hash(): The recusive flag should be boolean', E_USER_WARNING);
+            trigger_error('array_hash(): The recusive flag should be boolean, ' . gettype($params[2]) . ' given', E_USER_WARNING);
             return false;
         }
 
