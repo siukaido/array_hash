@@ -1,3 +1,3 @@
 # array_hash
 
-test
+![](https://travis-ci.org/siukaido/array_hash.svg?branch=master)
