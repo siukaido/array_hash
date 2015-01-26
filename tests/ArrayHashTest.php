@@ -51,6 +51,7 @@ class ArrayHashTest extends \PHPUnit_Framework_TestCase
             ),
         );
         $this->assertEquals($expected, array_hash($this->record_set, 'first_name'));
+        $this->assertEquals(array_column($this->record_set, null, 'first_name'), array_hash($this->record_set, 'first_name'));
     }
 
     public function test_lastNameColumnFromRecordSet()
@@ -76,6 +77,7 @@ class ArrayHashTest extends \PHPUnit_Framework_TestCase
             ),
         );
         $this->assertEquals($expected, array_hash($this->record_set, 'last_name'));
+        $this->assertEquals(array_column($this->record_set, null, 'last_name'), array_hash($this->record_set, 'last_name'));
     }
 
     public function test_ageColumnFromRecordSet()
@@ -95,6 +97,7 @@ class ArrayHashTest extends \PHPUnit_Framework_TestCase
             ),
         );
         $this->assertEquals($expected, array_hash($this->record_set, 'age'));
+        $this->assertEquals(array_column($this->record_set, null, 'age'), array_hash($this->record_set, 'age'));
     }
 
     public function test_firstNameColumnFromRecordSet2()
